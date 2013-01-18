@@ -18,12 +18,12 @@ require __DIR__ . '/libs/Preprocessor.php';
 
 // load config file
 if (!isset($_SERVER['argv'][1])) {
-	die("Usage: {$_SERVER['argv'][0]} <config_file> [-t | --test]");
+	die("Usage: {$_SERVER['argv'][0]} <config_file> [-t | --test]\n");
 }
 
 $configFile = realpath($_SERVER['argv'][1]);
 if (!$configFile) {
-	die("Missing config file {$_SERVER['argv'][1]}");
+	die("Missing config file {$_SERVER['argv'][1]}\n");
 }
 
 $options = getopt('t', array('test'));
